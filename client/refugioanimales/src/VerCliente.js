@@ -21,7 +21,7 @@ function VerCliente() {
             }
 
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/clients/${id}`, {
+                const response = await axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/clients/${id}`, {
                     headers: {
                         Authorization: `Bearer ${authData.token}`,
                         Accept: 'application/json'
@@ -53,7 +53,7 @@ function VerCliente() {
 
                 <Row className='d-flex'>
                     <Col md={3} className='me-5 mb-3'>
-                        <ClientCardProfile name={client.name} file_path={`http://127.0.0.1:8000/${client.file_path}`} />
+                        <ClientCardProfile name={client.name} file_path={`http://petcare-backend-193c8a8cd9bf.herokuapp.com/${client.file_path}`} />
                     </Col>
                     <Col md={8} className='mb-3'>
                         <Container className="bg-white p-5 rounded shadow">

@@ -15,7 +15,7 @@ function PetList() {
     useEffect(() => {
         const fetchPets = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/animals');
+                const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/animals');
                 setPets(response.data.data);
                 setFilteredPets(response.data.data);
             } catch (error) {
@@ -29,7 +29,7 @@ function PetList() {
     useEffect(() => {
         const fetchTypes = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/types');
+                const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/types');
                 setTypes(response.data.data); // Establecer los tipos de animal desde la API
             } catch (error) {
                 console.error('Error fetching types:', error);
@@ -43,7 +43,7 @@ function PetList() {
         const fetchBreeds = async () => {
             if (selectedType !== '') {
                 try {
-                    const response = await axios.get(`http://127.0.0.1:8000/api/breeds/${selectedType}`);
+                    const response = await axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/breeds/${selectedType}`);
                     setBreeds(response.data.data); // Establecer las razas según el tipo de animal seleccionado
                 } catch (error) {
                     console.error('Error fetching breeds:', error);
@@ -126,7 +126,7 @@ function PetList() {
                     <Col key={pet.id} md={4}>
                         <PetCard 
                             name={pet.name} 
-                            image={`http://127.0.0.1:8000/${pet.file_path}`} 
+                            image={`http://petcare-backend-193c8a8cd9bf.herokuapp.com/${pet.file_path}`} 
                             id = {pet.id} 
                         />
                     </Col>

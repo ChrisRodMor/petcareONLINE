@@ -30,13 +30,13 @@ function ReporteAdopcion() {
     // Validar existencia de IDs de cliente y animal
     try {
       const [clientResponse, animalResponse] = await Promise.all([
-        axios.get(`http://127.0.0.1:8000/api/clients/${formData.user_id}`, {
+        axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/clients/${formData.user_id}`, {
           headers: {
             Authorization: `Bearer ${authData.token}`,
             Accept: 'application/json'
           }
         }),
-        axios.get(`http://127.0.0.1:8000/api/animals/${formData.animal_id}`, {
+        axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/animals/${formData.animal_id}`, {
           headers: {
             Authorization: `Bearer ${authData.token}`,
             Accept: 'application/json'
@@ -56,7 +56,7 @@ function ReporteAdopcion() {
       formDataToSend.append('animal_id', formData.animal_id);
       formDataToSend.append('description', formData.description);
 
-      await axios.post('http://127.0.0.1:8000/api/store-adoption-report', formDataToSend, {
+      await axios.post('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/store-adoption-report', formDataToSend, {
         headers: {
           Authorization: `Bearer ${authData.token}`,
           Accept: 'application/json',

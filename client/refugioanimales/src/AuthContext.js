@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('http://127.0.0.1:8000/api/profile', {
+                    const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/profile', {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

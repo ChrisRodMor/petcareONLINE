@@ -42,7 +42,7 @@ function Register() {
 
     // Configura la instancia principal de Axios
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:8000/api',
+        baseURL: 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -51,7 +51,7 @@ function Register() {
 
     // Configura la instancia de Axios para la solicitud CSRF
     const csrfAxiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:8000',
+        baseURL: 'http://petcare-backend-193c8a8cd9bf.herokuapp.com',
         //withCredentials: true // Permite que Axios envíe cookies con las solicitudes
     });
 
@@ -60,7 +60,7 @@ function Register() {
 
         try {
             await csrfAxiosInstance.get('/sanctum/csrf-cookie');
-            const response = await axiosInstance.post('http://127.0.0.1:8000/api/register',form);
+            const response = await axiosInstance.post('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/register',form);
             console.log('Registro exitoso:', response.data);
             setRegistrationSuccess(true);
             setShowModal(true);

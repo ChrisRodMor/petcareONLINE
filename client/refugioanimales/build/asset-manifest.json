@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52880c68.css",
+    "main.js": "/static/js/main.dc281d9b.js",
+    "static/js/453.e7c467c1.chunk.js": "/static/js/453.e7c467c1.chunk.js",
+    "static/media/GettyImages-1209050323.png": "/static/media/GettyImages-1209050323.aaaefed54825c60038c9.png",
+    "static/media/carousel3.jpg": "/static/media/carousel3.1a9db864244d914dff88.jpg",
+    "static/media/bannerPetCare.png": "/static/media/bannerPetCare.cbc0daf011c178db857b.png",
+    "static/media/carousel2.jpg": "/static/media/carousel2.37313a8a7a6bc40f38f2.jpg",
+    "static/media/instagram.webp": "/static/media/instagram.9641162d051a455228cc.webp",
+    "static/media/carousel1.jpg": "/static/media/carousel1.c2a50575480867b4fc76.jpg",
+    "static/media/fondologinregistro.jpg": "/static/media/fondologinregistro.41931584e9aaee798ac8.jpg",
+    "static/media/grupomascotas.jpg": "/static/media/grupomascotas.56f6512c74f77e502346.jpg",
+    "static/media/tiktok.webp": "/static/media/tiktok.88524dffa02f1efed1d6.webp",
+    "static/media/gmail.webp": "/static/media/gmail.4c6d3f692c857e103310.webp",
+    "index.html": "/index.html",
+    "static/media/telephone-fill.svg": "/static/media/telephone-fill.4f90fedca97bb75f765ee1b70a48a827.svg",
+    "static/media/stopwatch.svg": "/static/media/stopwatch.19f847132fc64f07eddd7ebb0a4a144e.svg",
+    "static/media/geo-alt-fill.svg": "/static/media/geo-alt-fill.0db42c81a64e186b831b353c017dd952.svg",
+    "main.52880c68.css.map": "/static/css/main.52880c68.css.map",
+    "main.dc281d9b.js.map": "/static/js/main.dc281d9b.js.map",
+    "453.e7c467c1.chunk.js.map": "/static/js/453.e7c467c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52880c68.css",
+    "static/js/main.dc281d9b.js"
+  ]
+}

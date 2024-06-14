@@ -34,7 +34,7 @@ function AgregarAnimal() {
     useEffect(() => {
         const fetchTypes = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/types');
+                const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/types');
                 setTypes(response.data.data);
             } catch (error) {
                 console.error('Error fetching types:', error);
@@ -48,7 +48,7 @@ function AgregarAnimal() {
         const fetchBreeds = async () => {
             if (selectedType !== '') {
                 try {
-                    const response = await axios.get(`http://127.0.0.1:8000/api/breeds/${selectedType}`);
+                    const response = await axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/breeds/${selectedType}`);
                     setBreeds(response.data.data);
                 } catch (error) {
                     console.error('Error fetching breeds:', error);
@@ -119,7 +119,7 @@ function AgregarAnimal() {
                 formDataToSend.append(key, formData[key]);
             }
 
-            await axios.post('http://127.0.0.1:8000/api/store-animals', formDataToSend, {
+            await axios.post('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/store-animals', formDataToSend, {
                 headers: {
                     Authorization: `Bearer ${authData.token}`,
                     Accept: 'application/json',

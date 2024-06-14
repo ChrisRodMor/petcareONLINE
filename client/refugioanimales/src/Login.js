@@ -31,7 +31,7 @@ function Login() {
 
     // Configura la instancia principal de Axios
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:8000/api',
+        baseURL: 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -40,7 +40,7 @@ function Login() {
 
     // Configura la instancia de Axios para la solicitud CSRF
     const csrfAxiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:8000',
+        baseURL: 'http://petcare-backend-193c8a8cd9bf.herokuapp.com',
         //withCredentials: true // Permite que Axios envíe cookies con las solicitudes
     });
 

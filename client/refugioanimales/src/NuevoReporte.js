@@ -31,7 +31,7 @@ function NuevoReporte() {
   useEffect(() => {
     const fetchTypes = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/types');
+        const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/types');
         setTypes(response.data.data);
       } catch (error) {
         console.error('Error fetching types:', error);
@@ -45,7 +45,7 @@ function NuevoReporte() {
     const fetchBreeds = async () => {
       if (selectedType !== '') {
         try {
-          const response = await axios.get(`http://127.0.0.1:8000/api/breeds/${selectedType}`);
+          const response = await axios.get(`http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/breeds/${selectedType}`);
           setBreeds(response.data.data);
         } catch (error) {
           console.error('Error fetching breeds:', error);
@@ -94,8 +94,8 @@ function NuevoReporte() {
 
     const apiEndpoint =
       reportType === 'Reporte de maltrato'
-        ? 'http://127.0.0.1:8000/api/store-abuse-report'
-        : 'http://127.0.0.1:8000/api/store-lost-pet';
+        ? 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/store-abuse-report'
+        : 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/store-lost-pet';
 
     const formDataToSend = new FormData();
 

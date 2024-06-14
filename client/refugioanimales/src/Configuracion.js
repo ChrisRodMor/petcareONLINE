@@ -68,7 +68,7 @@ function Configuracion() {
             }
     
             const token = localStorage.getItem('token');
-            const response = await fetch('http://127.0.0.1:8000/api/update-profile', {
+            const response = await fetch('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/update-profile', {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -129,7 +129,7 @@ function Configuracion() {
 
                     <Row className='d-flex'>
                         <Col md={3} className='me-5 mb-3'>
-                            <ClientCardProfile name={authData.name} file_path={`http://127.0.0.1:8000/${authData.file_path}`} />
+                            <ClientCardProfile name={authData.name} file_path={`http://petcare-backend-193c8a8cd9bf.herokuapp.com/${authData.file_path}`} />
                             <input type="file" className="form-control" id="profilePicture" onChange={handleFileChange} />
                         </Col>
                         <Col md={8} className='mb-3'>

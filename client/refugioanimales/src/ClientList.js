@@ -18,7 +18,7 @@ function ClientList() {
             }
 
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/clients', {
+                const response = await axios.get('http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/clients', {
                     headers: {
                         Authorization: `Bearer ${authData.token}`,
                         Accept: 'application/json'
@@ -73,7 +73,7 @@ function ClientList() {
                     <Col key={client.id} md={4}>
                         <ClientCard 
                             name={client.name} 
-                            image={`http://127.0.0.1:8000/${client.image}`} 
+                            image={`http://petcare-backend-193c8a8cd9bf.herokuapp.com/${client.image}`} 
                             id={client.id} 
                         />
                     </Col>

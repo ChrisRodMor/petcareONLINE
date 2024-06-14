@@ -23,9 +23,9 @@ function Reportes() {
       try {
         let apiUrl = '';
         if (authData.type === 'employee') {
-          apiUrl = 'http://127.0.0.1:8000/api/reports';
+          apiUrl = 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/reports';
         } else if (authData.type === 'client') {
-          apiUrl = 'http://127.0.0.1:8000/api/user-reports';
+          apiUrl = 'http://petcare-backend-193c8a8cd9bf.herokuapp.com/api/user-reports';
         }
 
         const response = await axios.get(apiUrl, {
